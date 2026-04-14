@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--<bean id = "alien" class = "com.Anas.Spring1.Alien" scope = "prototype"></bean>  -->
+<!-- 	<property name = "age" value = "21"></property>
+	<property name = "lap" ref = "laptop"></property> -->
+<!-- 	<constructor-arg index = "1" ref = "laptop" ></constructor-arg>
+	<constructor-arg index = "0" value = "21" ></constructor-arg> -->
+
+<bean id = "alien" class = "com.Anas.Spring1.Alien" autowire="byType">
+
+	<property name="age" value="21"></property>
+</bean>
+
+
+<bean id = "laptop" class = "com.Anas.Spring1.Laptop" primary="true"></bean>
+<bean id="com" class = "com.Anas.Spring1.Desktop" scope="prototype"></bean>	
+
+</beans>
+
