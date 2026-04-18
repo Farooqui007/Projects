@@ -16,6 +16,6 @@ public class LoggingAspect {
 	// return type, class-name.method-name(args)
 	@Before("execution(* com.example.SpringBootREST.service.JobService.getJob(..))")
 	public void logMethodCall(JoinPoint jp ) {
-		LOGGER.info("method called" + jp.getSignature().getName());
+		LOGGER.info("method called " + jp.getSignature().getName());
 	}
 }
