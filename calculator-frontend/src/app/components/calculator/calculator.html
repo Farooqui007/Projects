@@ -1,0 +1,47 @@
+<div class="container">
+
+    <h1>Calculator</h1>
+
+    <div class="input-box">
+
+        <input
+            type="number"
+            [(ngModel)]="num1"
+            placeholder="Enter first number">
+
+        <input
+            type="number"
+            [(ngModel)]="num2"
+            placeholder="Enter second number">
+
+    </div>
+
+    <div class="button-box">
+
+        <button (click)="calculate('add')">
+            Add
+        </button>
+
+        <button (click)="calculate('subtract')">
+            Subtract
+        </button>
+
+        <button (click)="calculate('multiply')">
+            Multiply
+        </button>
+
+        <button (click)="calculate('divide')">
+            Divide
+        </button>
+
+    </div>
+
+    <div class="result-box" *ngIf="result">
+
+        <h2>Result: {{ result.result }}</h2>
+
+        <p>Operation: {{ result.operation }}</p>
+
+    </div>
+
+</div>
